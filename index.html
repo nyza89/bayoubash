@@ -2,73 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bayou Bash - A Hunt: Showdown Project</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bayou Bash - A Hunt: Showdown Project</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="sticky">
-        <a href="#" class="logo">bayou<span class="highlight">bash</span></a>
-        <ul class="nav">
-            <li><a href="#">Start</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#gadgets">Gadgets</a></li>
-            <li><a href="#media">Media</a></li>
-        </ul>
-    </header>
-    <section class="banner" id="banner">
-        <div class="content">
-            <h2>This is Bayou<span class="highlight">Bash</span></h2>
-            <p>All about Hunt: Showdown in one website. News, infos, tips and tricks, useful gadgets & more ...</p>
-            <a href="#news" class="btn">Let's Hunt</a>
-        </div>
-    </section>
-    <section class="news" id="news">
-        <div class="content">
-            <h3>What's new in Bayou?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur possimus laudantium veritatis odio
-                molestiae quae dolore sit dolor beatae, sapiente consectetur quis, optio temporibus dignissimos ut
-                reiciendis saepe! Id, molestiae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur possimus laudantium veritatis odio
-                molestiae quae dolore sit dolor beatae, sapiente consectetur quis, optio temporibus dignissimos ut
-                reiciendis saepe! Id, molestiae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur possimus laudantium veritatis odio
-                molestiae quae dolore sit dolor beatae, sapiente consectetur quis, optio temporibus dignissimos ut
-                reiciendis saepe! Id, molestiae.</p>
-        </div>
-    </section>
+  <header class="sticky">
+    <a href="#" class="logo">bayou<span class="highlight">bash</span></a>
+    <ul class="nav">
+      <li><a href="#">Start</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#gadgets">Gadgets</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+  </header>
+  <section class="banner" id="banner">
+    <div class="content">
+      <h2>This is Bayou<span class="highlight">Bash</span></h2>
+      <p>All about Hunt: Showdown in one website. News, infos, tips and tricks, useful gadgets & more ...</p>
+      <a href="#news" class="btn">Let's Hunt</a>
+    </div>
+  </section>
+  <section class="news" id="news">
+    <div class="content">
+      <h3>What's new in Bayou?</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur possimus laudantium veritatis odio
+        molestiae quae dolore sit dolor beatae, sapiente consectetur quis, optio temporibus dignissimos ut
+        reiciendis saepe! Id, molestiae.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur possimus laudantium veritatis odio
+        molestiae quae dolore sit dolor beatae, sapiente consectetur quis, optio temporibus dignissimos ut
+        reiciendis saepe! Id, molestiae.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur possimus laudantium veritatis odio
+        molestiae quae dolore sit dolor beatae, sapiente consectetur quis, optio temporibus dignissimos ut
+        reiciendis saepe! Id, molestiae.</p>
+    </div>
+  </section>
 
-    <section class="gadgets" id="gadgets">
-        <div class="content">
-            <div class="calculator">
-                <form>
-                    <input type="text" class="kill" id="kills" placeholder="Kills"><br>
-                    <input type="text" class="death" id="deaths" placeholder="Deaths"><br>
-                    <input type="button" onClick="getKd()" Value="Get your KD">
-                </form>
-                <p class="result">Your KD is <span id="result"></span>
-                </p>
-            </div>
-        </div>
-    </section>
-    <section style="min-height: 200px;"></section>
+  <section class="gadgets" id="gadgets">
+    <div class="content">
+      <div class="calculator">
+        <form>
+          <input type="text" class="kill" id="kills" placeholder="Kills"><br>
+          <input type="text" class="death" id="deaths" placeholder="Deaths"><br>
+          <input type="button" onClick="getKd()" Value="Get your KD">
+        </form>
+        <p class="result">Your KD is <span id="result"></span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section style="min-height: 200px;"></section>
 
-    <script type="text/javascript">
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            header.classList.toggle("sticky", window.scrollY > 0);
-        });
-    </script>
-
-    <script>
-        function getKd() {
-            const kills = document.getElementById("kills").value;
-            const deaths = document.getElementById("deaths").value;
-            document.getElementById("result").innerHTML = (kills <= 0 || kills >= 0 && deaths >= 0) ? kills / deaths : "senseless. Please only use positive values!";
-        };
-    </script>
+  <script src="script.js"></script>
 
 </body>
 
